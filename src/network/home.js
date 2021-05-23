@@ -1,4 +1,5 @@
 import {request} from 'network/request'
+import { requestLocal } from './request'
 
 export function getHomeMultidata(){
     return request({
@@ -6,18 +7,14 @@ export function getHomeMultidata(){
     })
 }
 
-export function getHomeGoods(type,page){
-    return request({
-        url:'/data.json',
-        params:{
-            type,
-            page
-        }
+export function getHomeGoodsList(){
+    return requestLocal({
+        url:'/data.json'
     })
 }
 
-// export function getHomeGoodsLocal(){
-//     return requestLocal({
-//         url:'/data.json'
-//     })
-// }
+export function getMoreGoodsList(){
+    return requestLocal({
+        url:'/data.json'
+    })
+}

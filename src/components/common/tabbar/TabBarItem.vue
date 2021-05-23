@@ -48,7 +48,7 @@
     methods: {
       btnActived() {
         this.$router.replace(this.path)
-        console.log(this.path)
+        // console.log(this.path)
       }
     }
   }
@@ -59,11 +59,11 @@
   .tab_bar_item {
     flex: 1;
     text-align: center;
-    line-height: 49px;
+    line-height: 33px;
     padding: 15px;
     background-color: rgb(238, 238, 238);
     color: gray;
-    height: 33px;
+    height: 25px;
     font-size: 18px;
     box-sizing: unset!important;
   }

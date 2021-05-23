@@ -3,11 +3,13 @@
     <nav-bar class="home-nav">
       <div slot="nav-center">购物街</div>
     </nav-bar>
-    <scroll class="content" ref="scroll" :probe-type="probeType" @scrollLength="showBackTop">
-      <home-swiper :banners="banners"></home-swiper>
+    <tab-control class="tab_control" :titles="titles" @tabClick="tabClick" ref="tabControl_top"
+      v-show="isTabControlFixed"></tab-control>
+    <scroll class="content" ref="scroll" :probe-type="probeType" @scrollLength="contentScroll" @pullingUp="loadMore">
+      <home-swiper :banners="banners" @swiperImgLoad="swiperImgLoad"></home-swiper>
       <home-recommend :recommends="recommends"></home-recommend>
       <home-feature></home-feature>
-      <tab-control class="tab_control" :titles="titles" @tabClick="tabClick"></tab-control>
+      <tab-control :titles="titles" @tabClick="tabClick" ref="tabControl"></tab-control>
       <goods-list :goods="showGoodsType"></goods-list>
     </scroll>
     <back-top @click.native="backClick" v-show="isShowBackTop"></back-top>
@@ -21,8 +23,7 @@
 </template>
 
 <script>
-  import axios from 'axios'
-
+  import {itemListenerMixin} from '../../common/mixin'
 
   import HomeSwiper from "./childComps/HomeSwiper";
   import HomeRecommend from "./childComps/HomeRecommend"
@@ -36,6 +37,8 @@
 
   import {
     getHomeMultidata,
+    getHomeGoodsList,
+    getMoreGoodsList
   } from 'network/home'
 
   export default {
@@ -63,21 +66,28 @@
         },
         showIndicator: false,
         probeType: 3,
-        isShowBackTop: false
+        isShowBackTop: false,
+        isTabControlFixed: false,
+        tabOffsetTop: 0,
+        saveY: 0
       }
     },
     created() {
       this.getHomeMultidata()
-      // 自己定义的数据获取
-      axios.get('./api/data.json').then(res => {
-        console.log(res.data)
-        this.goods.pop = res.data.pop
-        this.goods.news = res.data.news
-        this.goods.sell = res.data.sell
-      })
-      // this.getHomeGoods('pop')
-      // this.getHomeGoods('news')
-      // this.getHomeGoods('sell')
+      this.getHomeGoodsList()
+    },
+    mounted() {
+    },
+    mixins:[itemListenerMixin],//混入
+    activated() {
+      this.$refs.scroll.scrollTo(0, this.saveY, 0)
+      this.$refs.scroll.refresh()
+    },
+    deactivated() {
+      // 保存Y值
+      this.saveY = this.$refs.scroll.getScrollY()
+      // 取消itemimgLoad
+      this.$bus.$off('itemimgLoad', this.itemImgListener)
     },
     computed: {
       showGoodsType() {
@@ -85,6 +95,23 @@
       },
     },
     methods: {
+      /*
+      防抖函数
+      */
+      // debounce(func, delay = 300) {
+      //   let timer = null
+      //   return function (...args) {
+      //     if (timer) clearTimeout(timer)
+      //     timer = setTimeout(() => {
+      //       func.apply(this, args)
+      //       // console.log('home')
+      //       // console.log('/*/*/*/*/')
+      //     }, delay)
+      //   }
+      // },
+
+
+
       /*
       网络请求
        */ //
@@ -98,17 +125,61 @@
             console.log(err)
           })
       },
-      // getHomeGoods(type) {
-      //   const page = this.goods[type].page++
-      //   getHomeGoods(type, page)
-      //     .then(res => {
-      //       // this.goods.pop=res
-      //       console.log(res)
-      //     })
-      // },
+      getHomeGoodsList() {
+        getHomeGoodsList()
+          .then(res => {
+            this.goods.pop = res.data.pop
+            this.goods.news = res.data.news
+            this.goods.sell = res.data.sell
+          })
+      },
+      // 加载更多数据
+      loadMore() {
+        getMoreGoodsList().then((res) => {
+            return new Promise((resolve, reject) => {
+              resolve(res)
+              reject()
+            })
+          })
+          .then((res) => {
+            setTimeout(() => {
+              switch (this.currentType) {
+                case 'pop':
+                  res.data.pop.list.forEach(item => {
+                    this.goods.pop.list.push(item)
+                  })
+                  break;
+                case 'news':
+                  res.data.news.list.forEach(item => {
+                    this.goods.news.list.push(item)
+                  })
+                  break;
+                case 'sell':
+                  res.data.sell.list.forEach(item => {
+                    this.goods.sell.list.push(item)
+                  })
+                  break;
+              }
+              this.$refs.scroll.finishPullUp()
+            }, 2000)
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      },
+
+
+
+
+
       /*
       事件监听
       */ //
+      // 等到轮播图照片加载完成后发出事件，再获取正确的offsetTop
+      swiperImgLoad() {
+        this.tabOffsetTop = this.$refs.tabControl.$el.offsetTop
+      },
+      //对父组件的数据更改
       imgsrc_change(obj1, obj2) {
         this.banners.push(obj1)
         this.banners.unshift(obj2)
@@ -125,17 +196,30 @@
             this.currentType = 'sell'
             break;
         }
+        this.$refs.tabControl_top.currentIndex = index
+        this.$refs.tabControl.currentIndex = index
       },
+      // 点击回到顶部
       backClick() {
         this.$refs.scroll.scrollTo(0, 0)
       },
-      showBackTop(pos) {
+      // 箭头按钮显示与隐藏+tabControl的fixed
+      contentScroll(pos) {
+        // 1.判断backTop是否显示
         this.isShowBackTop = (-pos.y) > 500;
+        // 2.决定tabControl是否吸顶(position:fixed)
+        this.isTabControlFixed = (-pos.y) > this.tabOffsetTop
+
       }
     },
   }
 
 </script>
+
+
+
+
+
 <style scoped>
   #home {
     padding-top: 44px;
@@ -145,16 +229,17 @@
   .home-nav {
     background-color: var(--color-tint);
     color: rgb(48, 106, 139);
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    z-index: 2;
+    margin-top: -44px;
+    /* font-weight: bold; */
+  }
+
+  .home-nav div {
+    font-weight: bold;
   }
 
   .tab_control {
-    position: sticky;
-    top: 44px;
+    position: relative;
+    z-index: 5;
   }
 
   .content {
@@ -163,7 +248,14 @@
     left: 0;
     right: 0;
     top: 44px;
-    bottom: 49px;
+    bottom: 33px;
   }
+
+  /* .fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 44px;
+  } */
 
 </style>

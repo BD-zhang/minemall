@@ -11,11 +11,11 @@ export function request(config) {
   return instance(config)
 }
 
-// export function requestLocal(config){
-//     const instance = axios.create({
-//         baseURL:'../../api',
-//         timeout:2000
-//     })
+export function requestLocal(config){
+    const instance = axios.create({
+        baseURL:'.././api',
+        timeout:2000
+    })
 
-//     return instance(config)
-// }
+    return instance(config)
+}

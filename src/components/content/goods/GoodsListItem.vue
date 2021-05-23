@@ -1,6 +1,6 @@
 <template lang="">
-  <div class="goods_item">
-    <img :src="goodsItem.image" alt="" class="goods_item_image">
+  <div class="goods_item" @click="itemClick">
+    <img :src="goodsItem.image" alt="" class="goods_item_image" @load="imgLoad">
     <div class="goods_item_box">
       <p class="goods_item_decription">{{goodsItem.description}}</p>
       <div class="goods_item_smallbox">
@@ -10,6 +10,7 @@
             <use xlink:href="#icon-shoucang"></use>
           </svg>
           <span>{{goodsItem.collections}}</span>
+          <!-- <span>{{goodsItem.id}}</span> -->
         </span>
 
       </div>
@@ -30,12 +31,29 @@
         default () {
           return {}
         }
+      },
+    },
+    methods: {
+      imgLoad() {
+        this.$bus.$emit('itemimgLoad')
+      },
+      itemClick() {
+        // 跳转详情页
+        // console.log('456')
+        // this.$router.push('/detail')
+        // this.$router.push({
+        //   path:'/detail',
+        //   query:{
+        //     id:123
+        //   }
+        // })
+        this.$router.push('/detail/' + this.goodsItem.id)
       }
-    }
+    },
   }
 
 </script>
-<style scoped>
+<style>
   .icon {
     width: 1em;
     height: 1em;

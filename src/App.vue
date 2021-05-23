@@ -1,10 +1,13 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <keep-alive exclude="Detail">
+      <router-view></router-view>
+    </keep-alive>
+
     <main-tab-bar></main-tab-bar>
   </div>
 </template>
-<!-- <script src="//at.alicdn.com/t/font_2512573_n6ncdve6hxn.js"></script> -->
+
 <script>
   import MainTabBar from 'components/content/maintabbar/MainTabBar'
   export default {
@@ -13,9 +16,11 @@
       MainTabBar,
     }
   }
+
 </script>
 
 
 <style>
-@import 'assets/css/base.css';
+  @import 'assets/css/base.css';
+
 </style>

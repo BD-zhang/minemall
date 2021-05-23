@@ -127,28 +127,13 @@
         scroll: null
       }
     },
-    created() {
-
+    mounted() {
+      this.$bus.$on('abc',res=>{
+        console.log(res)
+      })
     },
-    // mounted() {
-    //   //   看文档
-    //   this.scroll = new BScroll(this.$refs.wrapper, {
-    //     probeType: 3,
-    //     click: true,
-    //     pullUpLoad: true
-    //   })
-    //   //   scroll.on('scroll',pos=>{
-    //   //       console.log(pos)
-    //   //   })
-    //   this.scroll.on('pullingUp', () => {
-    //     console.log('-----')
-    //     //先发送网络请求，请求更多页
-    //     //   等数据请求完成后，将新数据展示
-    //     setTimeout(() => {
-    //       scroll.finishPullUp()
-    //     }, 2000)
-    //   })
-    // },
+    methods: {
+    },
   }
 
 </script>

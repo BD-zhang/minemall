@@ -35,7 +35,7 @@
   }
 
   .center {
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 20px;
     flex: 1;
     height: 44px;

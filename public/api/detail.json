@@ -1,0 +1,275 @@
+{
+  "id": 0,
+  "result": {
+    "columns": ["销量684", "收藏246人", "默认快递"],
+    "itemInfo": {
+      "price": "￥89.00",
+      "oldprice": "￥109.00",
+      "discountDesc": "活动价",
+      "discountBgColor": "#f13e3a",
+      "title": "抖音同款夏日清凉套装，立即订购有巨大折扣立即订购有巨大折扣立即订购有巨大折扣123456789461321564321354687261",
+      "desc": "78975646765432135473138731357312"
+    },
+    "services": [
+      {
+        "icon": "#icon-duigou",
+        "name": "7天无理由退货"
+      },
+      {
+        "icon": "#icon-duigou",
+        "name": "全国包邮"
+      },
+      {
+        "icon": "#icon-chahao",
+        "name": "72小时发货"
+      }
+    ],
+    "topImages": [
+      "//img13.360buyimg.com/n1/s350x449_jfs/t1/172850/6/8630/141061/60980f09Ed74efc96/cbc279f5e2ab907d.jpg!cc_350x449.jpg",
+      "//img13.360buyimg.com/n1/s350x449_jfs/t1/154158/38/15936/131996/600e9aa1E73e03adf/9d28da1235c9839e.jpg!cc_350x449.jpg",
+      "//img13.360buyimg.com/n1/s350x449_jfs/t1/155681/7/7593/109249/600e9aa1Eeb36898b/69bb28c68feecb03.jpg!cc_350x449.jpg",
+      "//img13.360buyimg.com/n1/s350x449_jfs/t1/166234/38/4306/42018/600e9aa2E49e5a5aa/764e22570767544e.jpg!cc_350x449.jpg"
+    ],
+    "shopInfo": {
+      "shopLogo": "https://gss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/10dfa9ec8a1363277a0ae6ab938fa0ec09fac746.jpg",
+      "name": "威克多",
+      "fans": "100",
+      "sells": "500",
+      "score": [{
+          "name": "描述相符",
+          "score": "4.64",
+          "isBetter": true
+        },
+        {
+          "name": "价格合理",
+          "score": "5",
+          "isBetter": false
+        },
+        {
+          "name": "质量满意",
+          "score": "4.64",
+          "isBetter": true
+        }
+      ],
+      "goodsCount": "115",
+      "cSells": "5.8万",
+      "cGoods": "99"
+    },
+    "detailInfo": {
+      "detailImage": [
+        "https://img.alicdn.com/imgextra/i4/3082583257/O1CN01YcZnB01ZvkeUGp4zh_!!3082583257.jpg",
+        "https://img.alicdn.com/imgextra/i3/3082583257/O1CN01v93B3A1Zvkeg9wEti_!!3082583257.jpg",
+        "https://img.alicdn.com/imgextra/i4/3082583257/O1CN01XwyIbX1Zvkeg9wVWK_!!3082583257.jpg"
+      ]
+    },
+    "paramsInfo": {
+      "info": [{
+          "sectionsName": "版型款式",
+          "setDetail": [{
+              "key": "领型",
+              "value": "圆领"
+            },
+            {
+              "key": "袖型",
+              "value": "常规"
+            },
+            {
+              "key": "袖长",
+              "value": "短袖"
+            },
+            {
+              "key": "版型",
+              "value": "宽松"
+            },
+            {
+              "key": "款式细节",
+              "value": "印花"
+            }
+          ]
+        },
+        {
+          "sectionsName": "工艺/流行",
+          "setDetail": [
+            {
+              "key": "花型图案",
+              "value": "字母数字"
+            },
+            {
+              "key": "细分风格",
+              "value": "潮"
+            },
+            {
+              "key": "服饰工艺",
+              "value": "免烫处理"
+            },
+            {
+              "key": "印花主题",
+              "value": "创意趣味"
+            }
+          ]
+        },
+        {
+          "sectionsName": "关键信息",
+          "setDetail": [
+            {
+              "key": "品牌",
+              "value": "BWCW"
+            },
+            {
+              "key": "面料分类",
+              "value": "棉毛布"
+            },
+            {
+              "key": "货号",
+              "value": "2021-1331T"
+            },
+            {
+              "key": "基础风格",
+              "value": "青春流行"
+            },
+            {
+              "key": "上市年份季节",
+              "value": "2021年春季"
+            },
+            {
+              "key": "厚薄",
+              "value": "常规"
+            }
+          ]
+        }
+      ]
+    },
+    "recommendInfo": {
+      "goodsList": [
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/181021_80cll8kdcl12j7d04ak6cklk2h5g7_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "10支色可选】口红不掉色保湿不沾杯滋润学生孕妇可用 持久显色",
+          "price": "20",
+          "collections": "100",
+          "id": 0
+        },
+        {
+          "image": "https://s17.mogucdn.com/p2/170107/106944721_0bkiih4f6ee5di040ll2b00e55gki_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 1
+        },
+        {
+          "image": "https://s18.mogucdn.com/mlcdn/c45406/181127_8ffk12j0i131lckcbdh451e5g6ca1_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 2
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/190921_442k8fd59a4ebdde7aa5cc25ai33k_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 3
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/170715_0h3c9587jjil39b3918e60he9cd8k_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 4
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/180205_415ha87hld4e081fabi8175l2i1kf_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 5
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/180205_415ha87hld4e081fabi8175l2i1kf_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 6
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/180205_415ha87hld4e081fabi8175l2i1kf_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 7
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/180205_415ha87hld4e081fabi8175l2i1kf_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 8
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/180205_415ha87hld4e081fabi8175l2i1kf_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 9
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/180205_415ha87hld4e081fabi8175l2i1kf_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 10
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/180205_415ha87hld4e081fabi8175l2i1kf_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 11
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/180205_415ha87hld4e081fabi8175l2i1kf_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "【抖音同款】眉卡画眉卡初学者全套眉毛贴眉贴画眉神器辅助器速眉术画化修眉刀眉笔套装第三代眉卡",
+          "price": "20",
+          "collections": "100",
+          "id": 12
+        },
+        {
+          "image": "https://s2.mogucdn.com/mlcdn/c45406/181021_80cll8kdcl12j7d04ak6cklk2h5g7_640x960.jpg_600x800.v1cAC.40.webp",
+          "description": "10支色可选】口红不掉色保湿不沾杯滋润学生孕妇可用 持久显色",
+          "price": "20",
+          "collections": "100",
+          "id": 13
+        }
+      ]
+    },
+    "commentsInfo":[
+      {
+        "profilePhoto":"//storage.360buyimg.com/i.imageUpload/31353238333030363931315f7031353235333938363738383432_sma.jpg",
+        "nickName":"用户10151015",
+        "comment":"质量真的不错，可以的以后还会再买,质量真的不错，可以的以后还会再买,质量真的不错，可以的以后还会再买质量真的不错，可以的以后还会再买质量真的不错，可以的以后还会再买",
+        "photos":[
+          "http://img30.360buyimg.com/shaidan/s616x405_jfs/t1/117947/17/5663/454179/5eb57e68E7d77de3c/ee5433f6e3162abc.jpg",
+          "//img30.360buyimg.com/shaidan/s616x405_jfs/t1/120401/29/483/363641/5eb57e68E621fe2ac/8df6698d51a68730.jpg",
+          "//img30.360buyimg.com/shaidan/s616x405_jfs/t1/119805/15/4390/363301/5eb57e68E8b5ca1a5/6c019b4f88621be3.jpg"
+        ],
+        "goodsSize":"M",
+        "goodsColor":"白",
+        "date":"1535694719",
+        "stars":5
+      },
+      {
+        "profilePhoto":"//storage.360buyimg.com/i.imageUpload/31353238333030363931315f7031353235333938363738383432_sma.jpg",
+        "nickName":"用户10151015",
+        "comment":"质量真的不错，可以的以后还会再买",
+        "photos":[
+          "http://img30.360buyimg.com/shaidan/s616x405_jfs/t1/117947/17/5663/454179/5eb57e68E7d77de3c/ee5433f6e3162abc.jpg",
+          "//img30.360buyimg.com/shaidan/s616x405_jfs/t1/120401/29/483/363641/5eb57e68E621fe2ac/8df6698d51a68730.jpg",
+          "//img30.360buyimg.com/shaidan/s616x405_jfs/t1/119805/15/4390/363301/5eb57e68E8b5ca1a5/6c019b4f88621be3.jpg"
+        ],
+        "goodsSize":"M",
+        "goodsColor":"白",
+        "date":"202005082344",
+        "stars":5
+      }
+    ]
+  }
+}
