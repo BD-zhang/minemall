@@ -1,4 +1,4 @@
-# minemall_local
+# minemall
 
 ## Project setup
 ```
