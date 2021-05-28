@@ -21,7 +21,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0px -3px 5px #cecdcd;
+    border-top: 1px solid #d1d1d1;
+    /* box-shadow: 0px -3px 5px #cecdcd; */
   }
 
 </style>

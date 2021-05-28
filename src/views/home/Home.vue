@@ -76,11 +76,10 @@
       this.getHomeMultidata()
       this.getHomeGoodsList()
     },
-    mounted() {
-    },
+    mounted() {},
     mixins:[itemListenerMixin],//混入
     activated() {
-      this.$refs.scroll.scrollTo(0, this.saveY, 0)
+      // this.$refs.scroll.scrollTo(0, this.saveY, 0)
       this.$refs.scroll.refresh()
     },
     deactivated() {
@@ -95,23 +94,6 @@
       },
     },
     methods: {
-      /*
-      防抖函数
-      */
-      // debounce(func, delay = 300) {
-      //   let timer = null
-      //   return function (...args) {
-      //     if (timer) clearTimeout(timer)
-      //     timer = setTimeout(() => {
-      //       func.apply(this, args)
-      //       // console.log('home')
-      //       // console.log('/*/*/*/*/')
-      //     }, delay)
-      //   }
-      // },
-
-
-
       /*
       网络请求
        */ //

@@ -24,7 +24,7 @@
     background-color: rgb(255, 255, 255);
     position: fixed;
     right: 10px;
-    bottom: 100px;
+    bottom: 80px;
     z-index: 10;
   }
 

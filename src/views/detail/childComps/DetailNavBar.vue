@@ -8,7 +8,7 @@
       </div>
       <div slot="nav-center" class="detail_titles">
         <div v-for="(item, index) in titles" :key="index" class="detail_titles_items"
-          :class="{actived:currentIndex==index}" @click="currentIndexChange(index)">{{item}}</div>
+          :class="{actived:currentIndex==index }" @click="currentIndexChange(index)">{{item}}</div>
       </div>
       <div slot="nav-right">
 
@@ -34,12 +34,13 @@
       // 导航栏 actived 样式触发  
       currentIndexChange(index) {
         this.currentIndex = index
+        this.$emit('titleClick',index)
       },
       //   返回前一页
       backUrl(){
           this.$router.back()
       }
-    }
+    },
   }
 
 </script>
